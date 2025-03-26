@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="James Bellizia">
+        <title>Server Accessor</title>
+        <meta name="description" content="This page is a UI for the UVM silk server.">
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    </head>
+    <body>
+    	<header>
+    		<h1>CS 2300</h1>
+    		<h2>M3OEP - Server Accessor</h2>
+    	</header>
+        <form enctype="multipart/form-data" action="process.php" method="POST">
+            <!-- this section of the form gets the user's choice of action -->
+            <div class = "userAction">
+                <label for="userAction">Select a server action: </label>
+                <p>
+                <input type="radio" name="userAction" id="uploadFile" required value = "uploadFile"> Upload file
+                </p><p>
+                <input type="radio" name="userAction" id="createDirectory" required value = "createDirectory"> Create directory
+                </p><p>
+                <input type="radio" name="userAction" id="downloadFile" required value = "downloadFile"> Download file
+                </p><p>
+                <input type="radio" name="userAction" id="showDirectoryContents" required value = "showDirectoryContents"> Show directory contents
+                </p>
+            </div>
+            <br>
+            
+            <!-- this section of the form gets the user's choice of file to be uploaded and the directory to upload it to if that was the option they selected, otherwise it is hidden -->
+            <div class = "dropdownOption uploadFile">
+                <label for = "filePathUpload">Enter the file path where you would like to upload the file:</label>
+                <input type = "text" name = "filePathUpload" id = "filePathUpload" > 
+                <br>
+                <label for = "file">Enter the file to add (2MB max size, thank UVM):</label>
+                <input type = "file" name = "file" id = "file" > 
+            </div>
+
+            <!-- this section of the form gets the user's choice of directory to create if that was the option they selected, otherwise it is hidden -->
+            <div class = "dropdownOption createDirectory">
+                <label for = "fileNameCreateDirectory">Enter the name of the new directory to be created:</label>
+                <input type = "text" name = "fileNameCreateDirectory" id = "fileNameCreateDirectory" > 
+                <br>
+                <label for = "filePathCreateDirectory">Enter the parent folder for the new directory to be added to, or nothing for the root:</label>
+                <input type = "text" name = "filePathCreateDirectory" id = "filePathCreateDirectory" > 
+            </div>
+
+            <!-- this section of the form gets the user's choice of file to be downloaded if that was the option they selected, otherwise it is hidden -->
+            <div class = "dropdownOption downloadFile">
+                <label for = "filePathDownload">Enter the file path of the file you would like to download:</label>
+                <input type = "text" name = "filePathDownload" id = "filePathDownload" > 
+            </div>
+
+
+            <!-- this section of the form gets the user's choice of file directory to be shown if that was the option they selected, otherwise it is hidden -->
+            <div class = "dropdownOption showDirectoryContents">
+                <label for = "filePathShow">Enter the file path of the directory whose content you wish to view:</label>
+                <input type = "text" name = "filePathShow" id = "filePathShow" > 
+            </div>
+
+            <!-- this section of the form gets the password the user needs to know to make changes to the serverd -->     
+            <div class = "password">
+                <label for = "password">Enter the secret password:</label>
+                <input type = "text" id = "password" name = "password" required minlength="1"> 
+            </div>
+
+            <input type="submit" value="Submit" />
+
+
+        </form>
+
+    </body>
+</html>

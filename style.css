@@ -1,0 +1,51 @@
+/* all table css modified from Professor Dion's css file*/
+table {
+	border-collapse: collapse;
+	margin: 20px;
+}
+th, td {
+	padding: 10px;
+}
+tr:nth-child(even) {
+	background-color: #ffffff;
+}
+tr:nth-child(odd) {
+	background-color: #b2b2b2;
+}
+table, th, td {
+	border: 1px solid rgb(0, 0, 0);
+	text-align: right;
+} 
+
+
+/* The following css shows and hides form options based on radio button selection*/
+.dropdownOption{
+	display: none;
+}
+.userAction:has(#uploadFile:checked)  ~ .uploadFile {
+	display: block;
+}
+.userAction:has(#createDirectory:checked)  ~ .createDirectory {
+	display: block;
+}
+.userAction:has(#downloadFile:checked)  ~ .downloadFile {
+	display: block;
+}
+.userAction:has(#showDirectoryContents:checked)  ~ .showDirectoryContents {
+	display: block;
+}
+
+form div:has(input), input[type="submit"]{
+	border: black solid;
+    padding: 2.5%;
+
+	
+}
+form {
+	padding: 2.5%;
+    border: black solid;
+    
+}
+form div:has(input){
+    border-collapse: collapse;
+}
