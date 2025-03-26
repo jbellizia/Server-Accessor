@@ -9,8 +9,8 @@
     </head>
     <body>
     	<header>
-    		<h1>CS 2300</h1>
-            <h2>M3OEP - Server Accessor</h2>
+    		<h1>James Bellizia</h1>
+            <h2>Server Accessor</h2>
     	</header>
         
         <?php
@@ -219,6 +219,6 @@
             echo "<p class = 'error'>INCORRECT PASSWORD</p>";
         }
         ?>
-        <a href = "https://jbellizi.w3.uvm.edu/CS2300/M3OEP-jbellizi/fileStorage.html">back</a>
+        <a href = "https://jbellizi.w3.uvm.edu/personal/Server-Accessor/fileStorage.html">back</a>
     </body>
 </html>
